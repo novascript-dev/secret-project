@@ -9,16 +9,13 @@
     {% tailwind_css %}
 </head>
 <body class="bg-gray-50 overflow-x-hidden">
-    <!-- Include Header -->
     {% include 'doctors/navbar.html' %}
 
-    <!-- Main Content -->
     <div class="w-screen-xl max-w-screen-xl mx-auto mt-[130px]">
         {% block content %}
         {% endblock %}
     </div>
 
-    <!-- Include Footer -->
     {% include 'doctors/footer.html' %}
     
 </body>
