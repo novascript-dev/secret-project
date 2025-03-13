@@ -2,14 +2,12 @@
 
 <div id="navbar" class="fixed z-50 top-8 w-full font-din">
     <div class="mx-auto flex items-center justify-between w-screen-xl max-w-screen-xl bg-[#232323] px-8 py-4 rounded-3xl">
-        <!-- Logo -->
         <div class="flex items-center">
             <a href="/doctors/">
             <img src="{% static 'img/kaya-doc-logo.png' %}" class="max-h-12" alt="Kaya Doc Logo">
             </a>
         </div>
 
-        <!-- Navbar completa (esconde no mobile) -->
         <div class="mr-auto ml-16 hidden lg:flex items-center gap-6">
             <div x-data="{ open: false }" class="relative">
                 <button @click="open = !open" class="flex items-center gap-2 px-4 py-2 text-white rounded-lg">
@@ -40,7 +38,6 @@
             </div>
         </div>
 
-        <!-- Botões (esconde no mobile) -->
         <div class="hidden lg:flex items-center space-x-4">
             <button class="border-[#e0f4b3] border text-lg rounded-3xl px-12 py-1 bg-[#e0f4b3] hover:bg-[#272B20] text-kaya-dark-gray">
                 Teste grátis
@@ -50,7 +47,6 @@
             </button>
         </div>
 
-        <!-- Ícone do menu (Mobile) -->
         <div x-data="{ mobileOpen: false }" class="lg:hidden">
             <button @click="mobileOpen = !mobileOpen" class="text-white focus:outline-none">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -58,7 +54,6 @@
                 </svg>
             </button>
 
-            <!-- Menu Mobile (igual ao desktop) -->
             <div x-show="mobileOpen" class="absolute top-16 left-0 w-full bg-[#232323] text-white p-4 rounded-b-lg shadow-lg flex flex-col gap-2">
                 <div x-data="{ open: false }">
                     <button @click="open = !open" class="flex items-center justify-between w-full px-4 py-2 text-white rounded-lg">
